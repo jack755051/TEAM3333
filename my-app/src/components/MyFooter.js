@@ -1,4 +1,5 @@
 import React from 'react'
+import BoardGameFriend from '../images/Board Game Friend.png'
 
 function MyFooter(props) {
     return (
@@ -9,12 +10,10 @@ function MyFooter(props) {
                 class="flex flex-col justify-center mt-6 sm:mt-0 sm:w-full sm:px-8 md:flex-row"
                 >
                 <div class="flex flex-col items-center">
-                    <img src="./images/Board Game Friend.png" alt="" />
-                    <span class="my-5 text-sm text-white"
-                    >本網站為中壢資策會前端設計工程師班MFEE17第三組學員專題成果作品，本平台僅供學習、展示之用。<br />
+                    <img src={BoardGameFriend} alt="" />
+                    <span class="my-5 text-sm text-white">本網站為中壢資策會前端設計工程師班MFEE17第三組學員專題成果作品，本平台僅供學習、展示之用。<br />
                     若有侵權疑慮，您可以私訊臉書 -
-                    【中壢】前端工程師就業養成班(MFEE17)，後續會由專人協助處理。</span
-                    >
+                    【中壢】前端工程師就業養成班(MFEE17)，後續會由專人協助處理。</span>
                 </div>
                 </div>
             </div>

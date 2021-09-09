@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BGF from '../images/BGF.ico'
 import Shopping from '../images/shopping.png'
 import Frame from '../images/Frame.svg'
@@ -41,57 +41,46 @@ function MyNavbar(props) {
               <div className="hidden xl:block lg:block md:block">
                 <ul className="flex my-4">
                   <li className="w-36">
-                    <a
-                      href="/home.html"
+                    <Link to="/home.html"
                       className="block text-center rounded-md hover:text-yellow-300"
-                      >首頁</a
-                    >
+                      >首頁</Link>
                   </li>
                   <li className="w-36">
-                    <a href="#/" className="block text-center hover:text-yellow-300"
-                      >討論區</a
-                    >
+                    <Link to="#/" className="block text-center hover:text-yellow-300"
+                      >討論區</Link>
                   </li>
                   <li className="w-36">
-                    <a
-                      href="/product.html"
+                    <Link to="/product.html"
                       className="block text-center hover:text-yellow-300"
-                      >線上商城</a
-                    >
+                      >線上商城</Link>
                   </li>
                   <li className="w-36">
-                    <a href="#/" className="block text-center hover:text-yellow-300"
-                      >會員中心</a
-                    >
+                    <Link to="#/" className="block text-center hover:text-yellow-300"
+                      >會員中心</Link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div>
-            <a href="order.html"
+            <Link to="order.html"
               ><img
                 src={Shopping}
                 alt=""
                 className="flex w-5 h-5 align-middle"
-            /></a>
+            /></Link>
           </div>
         </div>
       </div>
       <div className="ml-8 mobile-menu md:hidden">
-        <a href="/home.html" className="block px-4 py-2 hover:text-yellow-300"
-          >首頁</a
-        >
-        <a href="gameroom.html" className="block px-4 py-2 hover:text-yellow-300"
-          >遊戲租賃</a
-        >
-        <a href="/product.html" className="block px-4 py-2 hover:text-yellow-300"
-          >線上商城</a
-        >
-
-        <a href="member.html" className="block px-4 py-2 hover:text-yellow-300"
-          >會員中心</a
-        >
+        <Link to="/home.html" className="block px-4 py-2 hover:text-yellow-300"
+          >首頁</Link>
+        <Link to="gameroom.html" className="block px-4 py-2 hover:text-yellow-300"
+          >遊戲租賃</Link>
+        <Link to="/product.html" className="block px-4 py-2 hover:text-yellow-300"
+          >線上商城</Link>
+        <Link to="member.html" className="block px-4 py-2 hover:text-yellow-300"
+          >會員中心</Link>
       </div>
     </nav>
         </>

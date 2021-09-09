@@ -8,6 +8,10 @@ import React, { useState } from 'react'
 
 //頁面
 import NotFoundPage from './pages/NotFoundPage'
+import Forum from './pages/Forum'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import CommentBox from './pages/CommentBox'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
@@ -21,20 +25,29 @@ function App() {
   return (
     <Router>
       <>
-      <MyNavbar auth={auth} />
+        <MyNavbar auth={auth} />
         <MyMainContent>
           <ScrollToTop>
             <Switch>
               <Router path="/forum">
                 <Forum />
               </Router>
+              <Router path="/commentbox">
+                <CommentBox />
+              </Router>
+              <Router path="/login">
+                <Login auth={auth} setAuth={setAuth}/>
+              </Router>
+              <Route exact path="/">
+                <Home auth={auth} />
+              </Route>
               <Router path="*">
                 <NotFoundPage />
               </Router>
             </Switch>
           </ScrollToTop>
         </MyMainContent>
-      <MyFooter />
+        <MyFooter />
       </>
     </Router>
   );
